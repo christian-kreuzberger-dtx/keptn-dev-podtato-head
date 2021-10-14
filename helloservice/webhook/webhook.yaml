@@ -1,0 +1,10 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.test.triggered
+      requests:
+        - curl --request POST http://127.0.0.1/foobar2/
+      subscriptionID: a7a7d14e-ff0c-4493-ba21-53f84a482afc
