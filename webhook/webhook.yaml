@@ -6,5 +6,5 @@ spec:
   webhooks:
     - type: sh.keptn.event.test.triggered
       requests:
-        - curl --request POST http://127.0.0.1/foobar/
+        - curl --request POST http://127.0.0.1/foobar3/
       subscriptionID: a7a7d14e-ff0c-4493-ba21-53f84a482afc
