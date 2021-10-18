@@ -1,0 +1,20 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.test.triggered
+      requests:
+        - "curl --header 'Content-Type: application/json' --request POST
+          http://jenkins.35.184.57.17.nip.io/job/Keptn%20test%20finished%20pipe\
+          line/buildWithParameters?token={{.env.secret_keptnjenkinsnewtoken_tok\
+          en}}&shkeptncontext={{.shkeptncontext}}&triggeredid={{.triggeredid}}&\
+          Project={{.data.project}}&Service={{.data.service}}&Stage={{.data.sta\
+          ge}}"
+      envFrom:
+        - name: secret_keptnjenkinsnewtoken_token
+          secretRef:
+            name: keptn-jenkins-new-token
+            key: token
+      subscriptionID: b37a3d36-58cd-40ea-848f-842c34e8428f
