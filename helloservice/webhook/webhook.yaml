@@ -6,7 +6,7 @@ spec:
   webhooks:
     - type: sh.keptn.event.test.triggered
       requests:
-        - curl --request GET --fail
+        - curl --fail --request GET
           http://jenkins.35.184.57.17.nip.io/job/Keptn%20test%20finished%20pipeline/buildWithParameters?token={{.env.secret_keptnjenkinsnewtoken_token}}&shkeptncontext={{.shkeptncontext}}&triggeredid={{.id}}&Project={{.data.project}}&Service={{.data.service}}&Stage={{.data.stage}}
       envFrom:
         - name: secret_keptnjenkinsnewtoken_token
