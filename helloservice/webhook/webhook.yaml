@@ -7,7 +7,7 @@ spec:
     - type: sh.keptn.event.test.triggered
       requests:
         - "curl --header 'Content-Type: application/json' --request POST
-          http://jenkins.35.184.57.17.nip.io/job/Keptn_test_finished_pipeline/b\
+          http://jenkins.35.184.57.17.nip.io/job/Keptn%20test%20finished%20pipeline/b\
           uildWithParameters?token=&shkeptncontext={{.shkeptncontext}}&triggere\
           did={{.triggeredid}}&Project={{.data.project}}&Service={{.data.servic\
           e}}&Stage={{.data.stage}}"
