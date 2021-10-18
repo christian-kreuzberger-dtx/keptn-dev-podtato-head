@@ -15,3 +15,7 @@ spec:
             name: keptn-jenkins-new-token
             key: token
       subscriptionID: 7fa59237-90c8-41fa-87c2-f51285bc6b80
+    - type: sh.keptn.event.test.triggered
+      requests:
+        - curl --request GET http://keptn.sh
+      subscriptionID: d0bd92bf-ca17-45a1-bd2e-ad8e4503941c
